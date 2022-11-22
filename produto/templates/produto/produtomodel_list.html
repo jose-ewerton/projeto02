@@ -1,0 +1,13 @@
+<ul>
+    <!-- Iterate over object_list -->
+    {% for object in object_list %}
+    <!-- Display Objects -->
+    <li>{{ object.nome }}  <a href="{% url 'comprar-produto' object.id %}">Comprar</a></li>
+    <li>{{ object.quantidade }}</li>
+ 
+    <hr/>
+    <!-- If object_list is empty  -->
+    {% empty %}
+    <li>Lista de produtos vazia.</li>
+    {% endfor %}
+</ul>
